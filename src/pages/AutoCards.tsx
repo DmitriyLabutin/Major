@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 import DataField from '../components/DataField';
 
 export default function AutoCards() {
-  const [showTable, setShowTable] = useState(false);
+  const [showTable, setShowTable] = useState(true);
   const setShowTrue = () => setShowTable(true)
   const cols = ['№', 'Марка', 'Модель', 'Поколение', 'Тип двигателя', 'Тип КПП', 'Тип кузова'];
 
@@ -115,7 +115,7 @@ export default function AutoCards() {
       <Navbar />
 
       <Stack direction={'row'} gap={4} m={'50px 90px'} alignItems={'center'}>
-        <MyButton onClick={setShowTrue}>Сформировать</MyButton>
+        <MyButton onClick={handleOpenModalCreate}>Создать</MyButton>
         <Modal open={openModalCreate} onClose={handleCloseModalCreate}>
           <Stack
             width={610}
@@ -251,9 +251,6 @@ export default function AutoCards() {
           </MenuItem>
         </Menu>
       </Stack>
-      <MyButton style={{position: 'absolute', top: '180px', left: '90px', width: '200px'}} onClick={handleOpenModalCreate}>
-        Создать
-      </MyButton>
       {rows.length ? (showTable && <MyTable
         tableColumns={cols}
         tableRows={rows}

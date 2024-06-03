@@ -62,7 +62,7 @@ export default function InvoicesForPayment() {
           sum: '2965905 руб'
         }
       ];
-      const [showTable, setShowTable] = useState(false);
+      const [showTable, setShowTable] = useState(true);
       const setShowTrue = () => setShowTable(true)
   return (
     <>

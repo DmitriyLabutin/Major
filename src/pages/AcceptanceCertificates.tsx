@@ -66,7 +66,7 @@ export default function AcceptanceCertificates() {
       file: 'Файл'
     },
   ];
-  const [showTable, setShowTable] = useState(false);
+  const [showTable, setShowTable] = useState(true);
   const setShowTrue = () => setShowTable(true)
   return (
     <>

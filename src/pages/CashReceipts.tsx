@@ -52,7 +52,7 @@ export default function CashReceipts() {
           amount: '523395 руб'
         }
       ];
-      const [showTable, setShowTable] = useState(false);
+      const [showTable, setShowTable] = useState(true);
   const setShowTrue = () => setShowTable(true)
   return (
     <>
